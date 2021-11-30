@@ -1,2 +1,14 @@
 logging:
   config: classpath:log4j2.yml
+# ===== 自定义swagger配置 ===== #
+swagger:
+  enabled: true
+  application-name: Open-Api
+  application-version: 1.0
+  application-description: iMaskCat OPEN API
+  try-host: http://localhost:${server.port}
+  servers:
+    - url: http://127.0.0.1:8080
+      description: local host
+    - url: http://10.5.4.3
+      description: dev host
